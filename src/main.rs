@@ -7,7 +7,7 @@ unsafe extern "C" fn decrypt(out: *mut String) {
 
     // magic offset 0x8c comes from the stack usage of this function, use a dissamber to
     // find the sub esp, [num] at the start of this fn
-    asm!("mov {esp}, esp; add {esp}, 0x8c", esp = inout(reg) esp);
+    asm!("mov {esp}, esp; add {esp}, 0x74", esp = inout(reg) esp);
 
     esp += 16; // push ebp/ebx/edi/esi
 
