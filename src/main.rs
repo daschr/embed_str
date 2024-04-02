@@ -5,7 +5,7 @@ use std::arch::asm;
 unsafe extern "C" fn decrypt(out: *mut String) {
     let mut esp = 0usize;
 
-    // magic offset 0x8c comes from the stack usage of this function, use a dissamber to
+    // magic offset 0x74 comes from the stack usage of this function, use a disassembler to
     // find the sub esp, [num] at the start of this fn
     asm!("mov {esp}, esp; add {esp}, 0x74", esp = inout(reg) esp);
 
