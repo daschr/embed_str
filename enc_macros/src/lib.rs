@@ -5,7 +5,7 @@ use proc_macro::{TokenStream, TokenTree};
 pub fn embed_str(in_stream: TokenStream) -> TokenStream {
     let lit = match in_stream.into_iter().next() {
         Some(TokenTree::Literal(l)) => l.to_string(),
-        t => panic!("[embed_str2] {:?} not a string literal!", t),
+        t => panic!("[embed_str] {:?} not a string literal!", t),
     };
 
     let raw_lit = if lit.starts_with("\"") {
