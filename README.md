@@ -2,5 +2,5 @@
 
 Example code for https://dsxm.de/embed-str-asm/
 
-## Bulding
+## Building
 * build it with `--release` on *i686-pc-windows-msvc* 
